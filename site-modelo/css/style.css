@@ -91,6 +91,7 @@ main article {
 .menu {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;           /* centraliza verticalmente todos os itens do menu */
   gap: 4px;
 }
 
@@ -116,6 +117,12 @@ main article {
 /* ===== Menu dropdown (Sobre Nós → integrantes) ===== */
 .dropdown {
   position: relative;            /* referência para posicionar o submenu */
+}
+
+/* O link "Sobre Nós" fica dentro de uma div; vira bloco para que o padding
+   ocupe espaço igual aos outros links e ele fique alinhado com eles */
+.dropdown > a {
+  display: block;
 }
 
 .dropdown .seta {
