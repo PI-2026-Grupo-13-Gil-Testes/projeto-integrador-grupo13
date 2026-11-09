@@ -5,15 +5,15 @@
 
 /* ===== Cores do site — altere aqui para mudar o tema todo ===== */
 :root {
-  --primaria: #1b7a3e;
-  --primaria-escura: #11552a;
-  --primaria-clara: #e8f4ec;
+  --primaria: #5f7360;        /* verde acinzentado (tom "jardim secreto") */
+  --primaria-escura: #44544a;
+  --primaria-clara: #e9eee7;
   --destaque: #f0a202;
   --texto: #222;
   --texto-suave: #5a5a5a;
-  --fundo: #f5f7f6;
+  --fundo: #f4f6f3;
   --branco: #fff;
-  --borda: #dde2df;
+  --borda: #d8ded5;
 }
 
 /* ===== Base ===== */
@@ -104,6 +104,41 @@ main article {
 .menu a:hover {
   background: var(--primaria-clara);
   color: var(--primaria);
+}
+
+/* ===== Menu dropdown (Sobre Nós → integrantes) ===== */
+.dropdown {
+  position: relative;            /* referência para posicionar o submenu */
+}
+
+.dropdown .seta {
+  font-size: 0.8em;
+}
+
+.dropdown-conteudo {
+  display: none;                 /* escondido até passar o mouse ou focar */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  padding: 6px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+}
+
+/* Abre com o mouse (computador) ou com toque/teclado (celular e acessibilidade) */
+.dropdown:hover .dropdown-conteudo,
+.dropdown:focus-within .dropdown-conteudo {
+  display: block;
+}
+
+.dropdown-conteudo a {
+  display: block;
+  white-space: nowrap;
+  font-weight: 500;
 }
 
 /* Página atual destacada no menu */
@@ -397,7 +432,7 @@ blockquote {
   font-weight: 700;
 }
 
-.cor-1 { background: linear-gradient(135deg, #1b7a3e, #4caf72); }
+.cor-1 { background: linear-gradient(135deg, #5f7360, #8fa38a); }
 .cor-2 { background: linear-gradient(135deg, #1f5f99, #4a8fd1); }
 .cor-3 { background: linear-gradient(135deg, #b8620b, #f0a202); }
 .cor-4 { background: linear-gradient(135deg, #6b3fa0, #a073d6); }
