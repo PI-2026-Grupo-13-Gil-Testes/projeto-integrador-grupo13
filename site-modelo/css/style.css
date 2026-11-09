@@ -5,9 +5,10 @@
 
 /* ===== Cores do site — altere aqui para mudar o tema todo ===== */
 :root {
-  --primaria: #56695a;        /* verde acinzentado (tom "jardim secreto") */
-  --primaria-escura: #44544a;
-  --primaria-clara: #e9eee7;
+  --primaria: #8ca38a;        /* verde acinzentado (tom "jardim secreto") */
+  --primaria-escura: #4a5c49; /* versão escura do mesmo verde: textos e links */
+  --primaria-clara: #eef2ed;  /* versão clara: fundos suaves */
+  --texto-sobre-primaria: #1f2a1f; /* texto em cima do verde (o branco não tem contraste) */
   --destaque: #f0a202;
   --texto: #222;
   --texto-suave: #5a5a5a;
@@ -49,7 +50,7 @@ h2 {
 }
 
 a {
-  color: var(--primaria);
+  color: var(--primaria-escura);
 }
 
 img {
@@ -150,13 +151,13 @@ main article {
 /* Página atual destacada no menu */
 .menu a.ativo {
   background: var(--primaria);
-  color: var(--branco);
+  color: var(--texto-sobre-primaria);
 }
 
 /* ===== Banner ===== */
 .banner {
-  background: linear-gradient(135deg, var(--primaria-escura), var(--primaria));
-  color: var(--branco);
+  background: linear-gradient(135deg, var(--primaria), #b8c8b6);
+  color: var(--texto-sobre-primaria);
   padding: 56px 0;
 }
 
@@ -179,7 +180,6 @@ main article {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  opacity: 0.85;
 }
 
 .botao {
@@ -236,7 +236,7 @@ main article {
   margin: 0 auto;
   border-radius: 50%;
   background: var(--primaria);
-  color: var(--branco);
+  color: var(--texto-sobre-primaria);
   font-weight: 700;
   font-size: 1.2rem;
   display: flex;
@@ -294,7 +294,7 @@ main article {
 
 .submenu a:hover {
   background: var(--primaria);
-  color: var(--branco);
+  color: var(--texto-sobre-primaria);
 }
 
 /* ===== Seção de cada integrante ===== */
@@ -326,7 +326,7 @@ main article {
 }
 
 .bloco h3 {
-  color: var(--primaria);
+  color: var(--primaria-escura);
   margin-bottom: 6px;
 }
 
@@ -438,7 +438,7 @@ blockquote {
   font-weight: 700;
 }
 
-.cor-1 { background: linear-gradient(135deg, #5f7360, #8fa38a); }
+.cor-1 { background: linear-gradient(135deg, #4a5c49, #8ca38a); }
 .cor-2 { background: linear-gradient(135deg, #1f5f99, #4a8fd1); }
 .cor-3 { background: linear-gradient(135deg, #b8620b, #f0a202); }
 .cor-4 { background: linear-gradient(135deg, #6b3fa0, #a073d6); }
@@ -487,7 +487,7 @@ td {
 
 th {
   background: var(--primaria);
-  color: var(--branco);
+  color: var(--texto-sobre-primaria);
 }
 
 /* ===== Rodapé ===== */
