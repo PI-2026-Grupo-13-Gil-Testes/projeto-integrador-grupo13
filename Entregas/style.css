@@ -1,0 +1,395 @@
+/* ===== Variáveis de cores ===== */
+:root {
+  --verde: #1b7a3e;          /* verde institucional */
+  --verde-escuro: #11552a;
+  --verde-claro: #e8f4ec;
+  --azul: #1f5f99;           /* cor das atividades do líder */
+  --azul-claro: #e9f1f9;
+  --laranja: #b8620b;        /* cor das atividades do grupo */
+  --laranja-claro: #fdf2e6;
+  --vermelho-claro: #fdeceb;
+  --texto: #222;
+  --texto-suave: #555;
+  --fundo: #f4f6f5;
+  --branco: #fff;
+  --borda: #d9dedb;
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h2 {
+  color: var(--verde-escuro);
+  border-bottom: 3px solid var(--verde);
+  padding-bottom: 4px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 16px 0 6px;
+}
+
+code {
+  background: #eef0ef;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+a {
+  color: var(--verde);
+}
+
+section {
+  margin: 32px 0;
+  scroll-margin-top: 64px; /* compensa o menu fixo ao clicar nos links */
+}
+
+/* ===== Cabeçalho ===== */
+.topo {
+  background: linear-gradient(135deg, var(--verde-escuro), var(--verde));
+  color: var(--branco);
+  padding: 36px 0 28px;
+}
+
+.topo h1 {
+  margin: 4px 0;
+  font-size: 2.2rem;
+}
+
+.instituicao {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.subtitulo {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+}
+
+.resumo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resumo li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== Menu ===== */
+.menu {
+  background: var(--branco);
+  border-bottom: 1px solid var(--borda);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: var(--verde);
+  background: var(--verde-claro);
+}
+
+/* ===== Caixas genéricas ===== */
+.caixa {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+/* ===== Tabela do cronograma ===== */
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--branco);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--borda);
+}
+
+th {
+  background: var(--verde);
+  color: var(--branco);
+}
+
+tbody tr:hover {
+  background: var(--verde-claro);
+}
+
+tr.feriado td {
+  background: var(--vermelho-claro);
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
+tr.destaque td {
+  font-weight: 700;
+  background: var(--verde-claro);
+}
+
+/* ===== Entregas (details/summary) ===== */
+.dica {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.entrega {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-left: 5px solid var(--verde);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  scroll-margin-top: 64px;
+}
+
+.entrega.previa {
+  border-left-color: var(--texto-suave);
+}
+
+.entrega summary {
+  cursor: pointer;
+  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  align-items: center;
+  list-style: none; /* remove a seta padrão */
+}
+
+.entrega summary::-webkit-details-marker {
+  display: none;
+}
+
+.entrega summary:hover {
+  background: var(--verde-claro);
+}
+
+.selo {
+  grid-row: span 2;
+  background: var(--verde);
+  color: var(--branco);
+  font-weight: 700;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previa .selo {
+  background: var(--texto-suave);
+}
+
+.data {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.titulo {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Indicador de abrir/fechar */
+.titulo::after {
+  content: " ▸";
+  color: var(--verde);
+}
+
+.entrega[open] .titulo::after {
+  content: " ▾";
+}
+
+.conteudo {
+  padding: 4px 22px 18px;
+  border-top: 1px solid var(--borda);
+}
+
+.tipo {
+  font-style: italic;
+  color: var(--texto-suave);
+}
+
+/* Colunas líder / grupo */
+.colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.papel {
+  border-radius: 6px;
+  padding: 4px 16px 8px;
+  margin-top: 10px;
+}
+
+.papel ul {
+  padding-left: 20px;
+}
+
+.papel.lider {
+  background: var(--azul-claro);
+  border-top: 3px solid var(--azul);
+}
+
+.papel.lider h3 {
+  color: var(--azul);
+}
+
+.papel.grupo {
+  background: var(--laranja-claro);
+  border-top: 3px solid var(--laranja);
+}
+
+.papel.grupo h3 {
+  color: var(--laranja);
+}
+
+.apos {
+  background: var(--verde-claro);
+  border-left: 4px solid var(--verde);
+  padding: 10px 14px;
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+
+.aviso-feriado {
+  background: var(--vermelho-claro);
+  border: 1px dashed #d9a3a0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  color: #8a2b25;
+  font-weight: 600;
+}
+
+/* ===== Entrega final ===== */
+.final {
+  border: 2px solid var(--verde);
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  padding: 6px 0 6px 30px;
+  position: relative;
+}
+
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  left: 4px;
+  color: var(--verde);
+  font-size: 1.1rem;
+}
+
+.apresentacoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.apresentacoes p {
+  margin: 0;
+  background: var(--verde-claro);
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 0.9rem;
+}
+
+.rodape a {
+  color: var(--branco);
+}
+
+.rodape p {
+  margin: 4px 0;
+}
+
+/* ===== Responsivo (celular) ===== */
+@media (max-width: 640px) {
+  .topo h1 {
+    font-size: 1.6rem;
+  }
+
+  .colunas {
+    grid-template-columns: 1fr; /* empilha líder e grupo */
+  }
+
+  .menu a {
+    padding: 10px;
+  }
+
+  .selo {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}

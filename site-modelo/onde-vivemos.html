@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onde Vivemos — Grupo [Nome do Grupo]</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="logo">[Nome do Grupo]</a>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <a href="onde-vivemos.html" class="ativo">Onde Vivemos</a>
+        <a href="tcts.html">TCTs</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner pequeno">
+    <div class="container">
+      <h1>Onde Vivemos</h1>
+      <p>Os municípios, bairros e linhas onde cada integrante mora.</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- E11: Carrossel de imagens (somente CSS, usando rolagem com "scroll-snap").
+         Para usar fotos reais, troque cada <div class="foto-exemplo"> por:
+         <img src="img/nome-da-foto.jpg" alt="Descrição da foto">
+         e salve as imagens na pasta img/ do repositório. -->
+    <section>
+      <h2>Galeria</h2>
+      <div class="carrossel">
+        <figure id="foto-1" class="slide">
+          <img class="inteira" src="img/brasao-tucunduva.png" alt="Brasão do município de Tucunduva">
+          <figcaption>Brasão de Tucunduva/RS, com o lema "Quem trabalha vence" e as datas 1934 e 1959.
+            <small>(Fonte: Wikimedia Commons, domínio público)</small></figcaption>
+        </figure>
+        <figure id="foto-2" class="slide">
+          <img src="img/soja-porto-maua.jpg" alt="Lavoura de soja no noroeste gaúcho">
+          <figcaption>Lavoura de soja no noroeste gaúcho, perto de Tucunduva. A agricultura mecanizada é a base da economia da região.
+            <small>(Foto: Leandro Kibisz, CC BY-SA 4.0, Wikimedia Commons)</small></figcaption>
+        </figure>
+        <figure id="foto-3" class="slide">
+          <img src="img/santa-rosa-centro.jpg" alt="Vista panorâmica do centro de Santa Rosa">
+          <figcaption>Centro de Santa Rosa/RS, cidade-polo da região, da qual Tucunduva se emancipou.
+            <small>(Foto: Loco085, CC BY-SA 3.0, Wikimedia Commons)</small></figcaption>
+        </figure>
+        <figure id="foto-4" class="slide">
+          <img src="img/balsa-rio-uruguai.jpg" alt="Balsa atravessando o Rio Uruguai">
+          <figcaption>Balsa no Rio Uruguai entre Porto Mauá (Brasil) e Alba Posse (Argentina), na fronteira próxima a Tucunduva.
+            <small>(Foto: Geogast, CC BY-SA 3.0, Wikimedia Commons)</small></figcaption>
+        </figure>
+      </div>
+      <!-- Pontos de navegação do carrossel -->
+      <nav class="pontos">
+        <a href="#foto-1" title="Foto 1"></a>
+        <a href="#foto-2" title="Foto 2"></a>
+        <a href="#foto-3" title="Foto 3"></a>
+        <a href="#foto-4" title="Foto 4"></a>
+      </nav>
+      <p class="dica">Arraste para o lado ou clique nos pontos para ver as fotos.</p>
+    </section>
+
+    <!-- ===================== INTEGRANTE 1 ===================== -->
+    <article id="integrante-1" class="integrante">
+      <header class="integrante-topo">
+        <div class="avatar">Gil</div>
+        <div>
+          <h2>Rafael Gil Ferques</h2>
+          <p class="papel">Mora em [Município/UF] · [Bairro ou Linha]</p>
+        </div>
+      </header>
+
+      <!-- E6: Município -->
+      <section class="bloco">
+        <h3>Município: [Nome do município]</h3>
+        <ul class="ficha">
+          <li><strong>Fundação:</strong> [data]</li>
+          <li><strong>População:</strong> [número de habitantes]</li>
+          <li><strong>Principal atividade econômica:</strong> [...]</li>
+        </ul>
+        <p>[Fatos históricos, geográficos, culturais ou curiosidades sobre o município.]</p>
+      </section>
+
+      <!-- E7: Bairro / Linha -->
+      <section class="bloco">
+        <h3>Bairro / Linha: [Nome]</h3>
+        <p>[História, aspectos marcantes e curiosidades do bairro ou da linha.]</p>
+      </section>
+
+      <!-- E11: Vídeo -->
+      <section class="bloco">
+        <h3>Vídeo</h3>
+        <div class="video">
+          <!-- Vídeo do YouTube incorporado (Compartilhar → Incorporar) -->
+          <iframe src="https://www.youtube.com/embed/3hrcTYytt-0"
+                  title="Tucunduva RS: cidade natal da banda Os Atuais e Capital da Lavoura Mecanizada"
+                  allowfullscreen></iframe>
+        </div>
+      </section>
+    </article>
+
+    <!-- ===================== INTEGRANTE 2 ===================== -->
+    <article id="integrante-2" class="integrante">
+      <header class="integrante-topo">
+        <div class="avatar">I2</div>
+        <div>
+          <h2>[Nome do Integrante 2]</h2>
+          <p class="papel">Mora em [Município/UF] · [Bairro ou Linha]</p>
+        </div>
+      </header>
+
+      <section class="bloco">
+        <h3>Município: [Nome do município]</h3>
+        <ul class="ficha">
+          <li><strong>Fundação:</strong> [data]</li>
+          <li><strong>População:</strong> [número de habitantes]</li>
+          <li><strong>Principal atividade econômica:</strong> [...]</li>
+        </ul>
+        <p>[Fatos históricos, geográficos, culturais ou curiosidades.]</p>
+      </section>
+
+      <section class="bloco">
+        <h3>Bairro / Linha: [Nome]</h3>
+        <p>[História, aspectos marcantes e curiosidades.]</p>
+      </section>
+
+      <section class="bloco">
+        <h3>Vídeo</h3>
+        <div class="video"><p>[Vídeo sobre o município]</p></div>
+      </section>
+    </article>
+
+    <!-- ===================== INTEGRANTE 3 ===================== -->
+    <article id="integrante-3" class="integrante">
+      <header class="integrante-topo">
+        <div class="avatar">I3</div>
+        <div>
+          <h2>[Nome do Integrante 3]</h2>
+          <p class="papel">Mora em [Município/UF] · [Bairro ou Linha]</p>
+        </div>
+      </header>
+
+      <section class="bloco">
+        <h3>Município: [Nome do município]</h3>
+        <ul class="ficha">
+          <li><strong>Fundação:</strong> [data]</li>
+          <li><strong>População:</strong> [número de habitantes]</li>
+          <li><strong>Principal atividade econômica:</strong> [...]</li>
+        </ul>
+        <p>[Fatos históricos, geográficos, culturais ou curiosidades.]</p>
+      </section>
+
+      <section class="bloco">
+        <h3>Bairro / Linha: [Nome]</h3>
+        <p>[História, aspectos marcantes e curiosidades.]</p>
+      </section>
+
+      <section class="bloco">
+        <h3>Vídeo</h3>
+        <div class="video"><p>[Vídeo sobre o município]</p></div>
+      </section>
+    </article>
+
+    <p class="voltar"><a href="#">Voltar ao topo ↑</a></p>
+  </main>
+
+  <footer class="rodape">
+    <p>Grupo [Nome do Grupo] · Projeto Integrador 2026</p>
+    <p>IFPR Câmpus Assis Chateaubriand · Informática Instrumental e Aplicada</p>
+  </footer>
+
+</body>
+</html>
