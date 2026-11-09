@@ -5,7 +5,7 @@
 
 /* ===== Cores do site — altere aqui para mudar o tema todo ===== */
 :root {
-  --primaria: #5f7360;        /* verde acinzentado (tom "jardim secreto") */
+  --primaria: #56695a;        /* verde acinzentado (tom "jardim secreto") */
   --primaria-escura: #44544a;
   --primaria-clara: #e9eee7;
   --destaque: #f0a202;
@@ -103,7 +103,13 @@ main article {
 
 .menu a:hover {
   background: var(--primaria-clara);
-  color: var(--primaria);
+  color: var(--primaria-escura); /* mais contraste sobre o fundo claro */
+}
+
+/* Foco visível ao navegar pelo teclado (Tab) */
+.menu a:focus-visible {
+  outline: 3px solid var(--primaria-escura); /* contraste de 8:1 com o branco */
+  outline-offset: 2px;
 }
 
 /* ===== Menu dropdown (Sobre Nós → integrantes) ===== */
